@@ -19,6 +19,13 @@ defmodule Headland.Router do
     get "/", PageController, :index
   end
 
+  scope "/api/v1", Headland do
+    pipe_through :api
+
+    get "/info", InfoController, :index
+    resources "/artists", ArtistController, except: [:new, :edit]
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", Headland do
   #   pipe_through :api
