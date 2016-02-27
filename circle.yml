@@ -2,7 +2,7 @@ dependencies:
   pre:
     - chmod a+x ci-prepare.sh
     - chmod a+x ci-test.sh
-    - ci-prepare.sh
+    - ./ci-prepare.sh
   cache_directories:
     - ~/dependencies
     - ~/.mix
@@ -11,7 +11,7 @@ dependencies:
 
 test:
   override:
-    - ci-test.sh
+    - ./ci-test.sh
 
 deployment:
   staging:
