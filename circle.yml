@@ -8,6 +8,7 @@ dependencies:
     - deps
     - _build
   pre:
+    - chmod +x ./circle_pre_build.sh
     - ./circle_pre_build.sh
     - mix deps.compile
     - mix compile
