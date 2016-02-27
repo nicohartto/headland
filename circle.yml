@@ -1,7 +1,7 @@
 dependencies:
   pre:
     - chmod a+x ci-prepare.sh
-    - chmod a+x ci-tests.sh
+    - chmod a+x ci-test.sh
     - bin/ci/prepare.sh
   cache_directories:
     - ~/dependencies
