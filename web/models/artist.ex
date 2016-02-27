@@ -24,5 +24,6 @@ defmodule Headland.Artist do
     model
     |> cast(params, @required_fields, @optional_fields)
     |> validate_length(:bio, min: 2)
+    |> unique_constraint(:name)
   end
 end
